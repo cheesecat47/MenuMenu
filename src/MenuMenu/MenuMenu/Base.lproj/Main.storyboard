@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vXt-a4-gCZ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,76 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MenuMenu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-264" y="157"/>
+        </scene>
+        <!--Recipe List View Controller-->
+        <scene sceneID="cGW-t9-dIP">
+            <objects>
+                <viewController id="vXt-a4-gCZ" customClass="RecipeListViewController" customModule="MenuMenu" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zou-fP-Bvh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="a43-fL-lC1">
+                                <rect key="frame" x="20" y="64" width="374" height="56"/>
+                                <subviews>
+                                    <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Eph-E8-GJr">
+                                        <rect key="frame" x="0.0" y="0.0" width="312" height="56"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <scopeButtonTitles>
+                                            <string>Title</string>
+                                            <string>Title</string>
+                                        </scopeButtonTitles>
+                                    </searchBar>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vG6-LY-SSv">
+                                        <rect key="frame" x="320" y="0.5" width="54" height="54"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="54" id="W39-5Q-cjT"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <state key="normal" backgroundImage="camera" catalog="system"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MM3-bq-6Po">
+                                <rect key="frame" x="20" y="140" width="374" height="250"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="E6o-po-6NN"/>
+                                </constraints>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.72156862749999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="MM3-bq-6Po" firstAttribute="centerX" secondItem="Ayt-M0-vRv" secondAttribute="centerX" id="6RK-9P-NXl"/>
+                            <constraint firstItem="Ayt-M0-vRv" firstAttribute="trailing" secondItem="MM3-bq-6Po" secondAttribute="trailing" constant="20" id="7Ty-3a-y0Q"/>
+                            <constraint firstItem="MM3-bq-6Po" firstAttribute="leading" secondItem="Ayt-M0-vRv" secondAttribute="leading" constant="20" id="PFT-dz-khG"/>
+                            <constraint firstItem="MM3-bq-6Po" firstAttribute="top" secondItem="a43-fL-lC1" secondAttribute="bottom" constant="20" id="X1R-8f-2mY"/>
+                            <constraint firstItem="a43-fL-lC1" firstAttribute="leading" secondItem="Ayt-M0-vRv" secondAttribute="leading" constant="20" id="pOb-vf-3vJ"/>
+                            <constraint firstItem="a43-fL-lC1" firstAttribute="centerX" secondItem="Ayt-M0-vRv" secondAttribute="centerX" id="q11-7v-DUo"/>
+                            <constraint firstItem="a43-fL-lC1" firstAttribute="top" secondItem="Ayt-M0-vRv" secondAttribute="top" constant="20" id="uyf-nd-UWp"/>
+                            <constraint firstItem="Ayt-M0-vRv" firstAttribute="trailing" secondItem="a43-fL-lC1" secondAttribute="trailing" constant="20" id="z4v-AI-Vkd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ayt-M0-vRv"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TcX-o5-k8X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="540.57971014492762" y="156.69642857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="camera" catalog="system" width="128" height="96"/>
+    </resources>
 </document>
