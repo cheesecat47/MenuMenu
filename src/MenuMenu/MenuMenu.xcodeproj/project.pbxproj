@@ -13,7 +13,9 @@
 		4442F2832479236700A7E2FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4442F2812479236700A7E2FA /* Main.storyboard */; };
 		4442F2852479237300A7E2FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4442F2842479237300A7E2FA /* Assets.xcassets */; };
 		4442F2882479237300A7E2FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4442F2862479237300A7E2FA /* LaunchScreen.storyboard */; };
+		4495368A248286470066A115 /* RecipeTableLowerTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44953689248286470066A115 /* RecipeTableLowerTableCell.swift */; };
 		44A64F7F247E8519005606A1 /* RecipeTableSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A64F7E247E8519005606A1 /* RecipeTableSection.swift */; };
+		44DF792324829E4300144583 /* carrot.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 44DF792224829E4300144583 /* carrot.jpg */; };
 		44E18491247A0855002408DA /* RecipeList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44E18490247A0855002408DA /* RecipeList.storyboard */; };
 		44E18495247A1B57002408DA /* RecipeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E18494247A1B57002408DA /* RecipeListViewController.swift */; };
 /* End PBXBuildFile section */
@@ -27,7 +29,9 @@
 		4442F2842479237300A7E2FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4442F2872479237300A7E2FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4442F2892479237300A7E2FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44953689248286470066A115 /* RecipeTableLowerTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableLowerTableCell.swift; sourceTree = "<group>"; };
 		44A64F7E247E8519005606A1 /* RecipeTableSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableSection.swift; sourceTree = "<group>"; };
+		44DF792224829E4300144583 /* carrot.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = carrot.jpg; sourceTree = "<group>"; };
 		44E18490247A0855002408DA /* RecipeList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecipeList.storyboard; sourceTree = "<group>"; };
 		44E18494247A1B57002408DA /* RecipeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,6 +76,8 @@
 				44E18490247A0855002408DA /* RecipeList.storyboard */,
 				44E18494247A1B57002408DA /* RecipeListViewController.swift */,
 				44A64F7E247E8519005606A1 /* RecipeTableSection.swift */,
+				44DF792224829E4300144583 /* carrot.jpg */,
+				44953689248286470066A115 /* RecipeTableLowerTableCell.swift */,
 			);
 			path = MenuMenu;
 			sourceTree = "<group>";
@@ -137,6 +143,7 @@
 				44E18491247A0855002408DA /* RecipeList.storyboard in Resources */,
 				4442F2882479237300A7E2FA /* LaunchScreen.storyboard in Resources */,
 				4442F2852479237300A7E2FA /* Assets.xcassets in Resources */,
+				44DF792324829E4300144583 /* carrot.jpg in Resources */,
 				4442F2832479236700A7E2FA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,6 +158,7 @@
 				44E18495247A1B57002408DA /* RecipeListViewController.swift in Sources */,
 				44A64F7F247E8519005606A1 /* RecipeTableSection.swift in Sources */,
 				4442F2802479236700A7E2FA /* ViewController.swift in Sources */,
+				4495368A248286470066A115 /* RecipeTableLowerTableCell.swift in Sources */,
 				4442F27C2479236700A7E2FA /* AppDelegate.swift in Sources */,
 				4442F27E2479236700A7E2FA /* SceneDelegate.swift in Sources */,
 			);
