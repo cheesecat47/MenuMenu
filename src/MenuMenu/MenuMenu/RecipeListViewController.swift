@@ -25,7 +25,7 @@ class RecipeListViewController: UIViewController, UITableViewDataSource, UITable
         
         self.lowerTableView.dataSource = self
         self.lowerTableView.delegate = self
-        self.lowerTableView.register(RecipeTableLowerTableCell.self, forCellReuseIdentifier: lowerCellIdentifier)
+//        self.lowerTableView.register(RecipeTableLowerTableCell.self, forCellReuseIdentifier: lowerCellIdentifier)
     }
 
     @IBOutlet weak var upperTableView: UITableView!
@@ -89,7 +89,8 @@ class RecipeListViewController: UIViewController, UITableViewDataSource, UITable
             let cell: RecipeTableLowerTableCell = tableView.dequeueReusableCell(withIdentifier: lowerCellIdentifier, for: indexPath) as! RecipeTableLowerTableCell
 
             cell.lowerCellLabel?.text = "food name"
-            cell.lowerCellImage?.image = UIImage(contentsOfFile: "carrot.jpg")
+            cell.lowerCellImage?.image = UIImage(named: "carrot.jpg")
+            dump("\(cell)")
                     
             return cell
         }
