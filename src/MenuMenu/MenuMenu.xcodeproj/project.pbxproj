@@ -13,6 +13,7 @@
 		4442F2832479236700A7E2FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4442F2812479236700A7E2FA /* Main.storyboard */; };
 		4442F2852479237300A7E2FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4442F2842479237300A7E2FA /* Assets.xcassets */; };
 		4442F2882479237300A7E2FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4442F2862479237300A7E2FA /* LaunchScreen.storyboard */; };
+		5C6103E42486C2FB005A6DBC /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6103E32486C2FB005A6DBC /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		4442F2842479237300A7E2FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4442F2872479237300A7E2FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4442F2892479237300A7E2FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C6103E32486C2FB005A6DBC /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				4442F2842479237300A7E2FA /* Assets.xcassets */,
 				4442F2862479237300A7E2FA /* LaunchScreen.storyboard */,
 				4442F2892479237300A7E2FA /* Info.plist */,
+				5C6103E32486C2FB005A6DBC /* TableViewCell.swift */,
 			);
 			path = MenuMenu;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4442F2802479236700A7E2FA /* ViewController.swift in Sources */,
+				5C6103E42486C2FB005A6DBC /* TableViewCell.swift in Sources */,
 				4442F27C2479236700A7E2FA /* AppDelegate.swift in Sources */,
 				4442F27E2479236700A7E2FA /* SceneDelegate.swift in Sources */,
 			);
@@ -286,6 +290,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MenuMenu/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -303,6 +308,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MenuMenu/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
