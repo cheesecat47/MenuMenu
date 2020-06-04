@@ -25,7 +25,7 @@ class FoodCameraController: UIViewController {
     }
     
     @IBAction func foodImageAddAction(_ sender: Any) {
-        let alert = UIAlertController(title: "사진을 어디에서 가져오시겠습니까?", message: "message", preferredStyle: .actionSheet)
+        let alert = UIAlertController(title: "사진을 어디에서 가져오시겠습니까?", message: "", preferredStyle: .actionSheet)
         let library = UIAlertAction(title: "사진앨범", style: .default, handler: {(action) in self.openLibrary()})
         let camera = UIAlertAction(title: "카메라", style: .default, handler: {(action) in self.openCamera()})
         let cancel = UIAlertAction(title: "취소", style: .cancel, handler: nil)
@@ -39,5 +39,25 @@ class FoodCameraController: UIViewController {
 }
 
 extension FoodCameraController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func openLibrary() {
+        picker.sourceType = .photoLibrary
+        present(picker, animated: false, completion: nil)
+    }
     
+    func openCamera() {
+        if (UIImagePickerController.isSourceTypeAvailable(.camera)) {
+            picker.sourceType = .camera
+            present(picker, animated: false, completion: nil)
+        } else {
+            dump("Camera not available")
+        }
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            foodImageView.image = image
+            dump("imagePickerController: InfoKey: \(info)")
+        }
+        dismiss(animated: true, completion: nil)
+    }
 }
