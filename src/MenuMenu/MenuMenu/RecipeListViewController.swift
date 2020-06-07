@@ -108,6 +108,17 @@ class RecipeListViewController: UIViewController, UITableViewDataSource, UITable
         }
     }
     
+    
+    // for RecipeDetailViewController
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let url = DemoURLs.carrotSoupLocal {
+            if let recipeDetailVC = segue.destination as? RecipeDetailViewController {
+                recipeDetailVC.imageURL = url
+                // recipeDetailVC.recipeTitle = (sender as? UILabel)~~~
+            }
+        }
+    }
+    
 //    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 //        if tableView == lowerTableView {
 //            return 225
