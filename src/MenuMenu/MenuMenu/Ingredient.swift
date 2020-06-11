@@ -10,9 +10,10 @@ import Foundation
 class Ingredient {
     var name : String
     var amount : String
-    
-    init(name: String, amount: String){
+    var type : String
+    init(name: String, amount: String, type: String){
         self.name = name
         self.amount = amount
+        self.type = type
     }
 }

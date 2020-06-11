@@ -10,15 +10,16 @@ import Foundation
 class Recipe {
     var id: Int
     var foodName: String
+    var imgPath: URL?
     var ingredients: [Ingredient]
     var process: [String]
-    var imgPath: URL?
     
-    init(id: Int, foodName: String, ingredients: [Ingredient], process : [String], imgPath : URL?){
+    
+    init(id: Int) {
         self.id = id
-        self.foodName = foodName
-        self.ingredients = ingredients
-        self.process = process
-        self.imgPath = imgPath
+        self.foodName = ""
+        self.imgPath = nil
+        self.ingredients = [Ingredient]()
+        self.process = [String]()
     }
 }
