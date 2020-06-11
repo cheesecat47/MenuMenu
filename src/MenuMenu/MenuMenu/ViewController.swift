@@ -52,23 +52,31 @@ class ViewController: UIViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        let testImageURL = URL(string: "https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png")
-        if image == nil {
-                imageURL = testImageURL
-        }
-        // Do any additional setup after loading the view.
-    }
         
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        // FOR DEBUG
+        if let views = RecipeRepository.shared.getAllRecipeSummaryViews(){
+            for (_, view) in views.enumerated() {
+                print("id: \(view.id)")
+                print("name: \(view.foodName)")
+                print("imagePath: \(String(describing: view.imgPath?.absoluteString))\n")
+            }
+        }
+        
+        if let recipe = RecipeRepository.shared.getRecipeById(id: 10){
+            print("id : \(recipe.id)")
+            print("name: \(recipe.foodName)")
+            print("filePath:  \(String(describing: recipe.imgPath?.absoluteString))")
+            print("----Ingredients----")
+            for (i, ingredient) in recipe.ingredients.enumerated() {
+                print("\(i+1). \(ingredient.name) \(ingredient.amount)")
+            }
+            print("----How to make----")
+            for (i, process) in recipe.process.enumerated() {
+                print("\(i+1). \(process)")
+            }
+            print("")
+        }
+        // FOR DEBUG END
     }
-    */
-
 }
 
