@@ -14,7 +14,7 @@
 
 import UIKit
 
-class RecipeListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class SearchIngredientsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var ingredientsSelectView: UITableView!
     override func viewDidLoad() {

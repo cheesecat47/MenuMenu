@@ -12,7 +12,7 @@
 
 import UIKit
 
-class FoodCameraController: UIViewController {
+class SearchImageViewController: UIViewController {
     
     let picker = UIImagePickerController()
 
@@ -38,7 +38,7 @@ class FoodCameraController: UIViewController {
 
 }
 
-extension FoodCameraController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+extension SearchImageViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func openLibrary() {
         picker.sourceType = .photoLibrary
         present(picker, animated: false, completion: nil)
