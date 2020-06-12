@@ -14,9 +14,8 @@
 
 import UIKit
 
-class SearchIngredientsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class SearchIngredientsViewController: UIViewController {
     
-    @IBOutlet weak var ingredientsSelectView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.upperTableView.dataSource = self
@@ -25,7 +24,7 @@ class SearchIngredientsViewController: UIViewController, UITableViewDataSource, 
         
         self.lowerTableView.dataSource = self
         self.lowerTableView.delegate = self
-//        self.lowerTableView.register(RecipeTableLowerTableCell.self, forCellReuseIdentifier: lowerCellIdentifier)
+//        self.lowerTableView.register(RecipeCell.self, forCellReuseIdentifier: lowerCellIdentifier)
     }
 
     @IBOutlet weak var upperTableView: UITableView!
@@ -36,8 +35,9 @@ class SearchIngredientsViewController: UIViewController, UITableViewDataSource, 
     
     var recipeTable = RecipeTable()
     lazy var sections = recipeTable.getSections()
-    
-    
+}
+
+extension SearchIngredientsViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
 //        dump("numberOfSections \(sections.count)")
         if tableView == upperTableView {
@@ -47,26 +47,16 @@ class SearchIngredientsViewController: UIViewController, UITableViewDataSource, 
         }
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        // 각 섹션 타이틀 문자열 반환
-//        dump("sections[\(section)]?.title \(String(describing: sections[section]?.title))")
-        if tableView == upperTableView {
-            return sections[section]?.title
-        } else {
-            return "검색 결과"
-        }
-    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // 테이블 뷰의 한 섹션당 몇 개의 셀을 담을것인지 반환
-//        dump("sections[\(section)]?.items.count \(String(describing: (sections[section]?.items.count)!))")
+    //        dump("sections[\(section)]?.items.count \(String(describing: (sections[section]?.items.count)!))")
         if tableView == upperTableView {
             return (sections[section]?.items.count)!
         } else {
             return 10
         }
     }
-    
+        
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // 각 셀을 반환.
         if tableView == upperTableView {
@@ -78,24 +68,37 @@ class SearchIngredientsViewController: UIViewController, UITableViewDataSource, 
             } else {
                 cell.accessoryType = .none
             }
-                    
+                        
             cell.textLabel?.text = item?.name ?? ""
-                    
+                        
             //        dump("cell: \(cell)")
-                    // 테이블 움직일 때 실시간으로 생성.
-                    
+            // 테이블 움직일 때 실시간으로 생성.
+                        
             return cell
         } else {
-            let cell: RecipeTableLowerTableCell = tableView.dequeueReusableCell(withIdentifier: lowerCellIdentifier, for: indexPath) as! RecipeTableLowerTableCell
+            let cell: RecipeCell = tableView.dequeueReusableCell(withIdentifier: lowerCellIdentifier, for: indexPath) as! RecipeCell
 
-            cell.lowerCellLabel?.text = "food name"
-            cell.lowerCellImage?.image = UIImage(named: "carrot.jpg")
-            dump("\(cell)")
-                    
+            cell.recipeCellLabel?.text = "food name"
+            cell.recipeCellImage?.image = UIImage(named: "carrot.jpg")
+//            dump("\(cell)")
+                        
             return cell
         }
     }
-    
+}
+
+
+extension SearchIngredientsViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        // 각 섹션 타이틀 문자열 반환
+//        dump("sections[\(section)]?.title \(String(describing: sections[section]?.title))")
+        if tableView == upperTableView {
+            return sections[section]?.title
+        } else {
+            return "검색 결과"
+        }
+    }
+        
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if tableView == upperTableView {
             var item = sections[indexPath.section]?.items[indexPath.row]
@@ -107,12 +110,4 @@ class SearchIngredientsViewController: UIViewController, UITableViewDataSource, 
             dump("lowerCell Clicked!")
         }
     }
-    
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        if tableView == lowerTableView {
-//            return 225
-//        } else {
-//            return 50
-//        }
-//    }
 }

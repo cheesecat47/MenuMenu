@@ -41,15 +41,15 @@
                                 <rect key="frame" x="20" y="378" width="335" height="331"/>
                                 <color key="backgroundColor" white="1" alpha="0.49729773116438358" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="lowerCell" id="bdY-da-Rww" customClass="RecipeTableLowerTableCell" customModule="MenuMenu" customModuleProvider="target">
-                                        <rect key="frame" x="15" y="55.333332061767578" width="305" height="93"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="lowerCell" id="bdY-da-Rww" customClass="RecipeCell" customModule="MenuMenu" customModuleProvider="target">
+                                        <rect key="frame" x="15" y="55.333332061767578" width="305" height="93.333335876464844"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bdY-da-Rww" id="Ofx-ls-4Mj">
-                                            <rect key="frame" x="0.0" y="0.0" width="305" height="93"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="305" height="93.333335876464844"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ho4-st-dJd">
-                                                    <rect key="frame" x="10" y="10" width="285" height="73"/>
+                                                    <rect key="frame" x="10" y="10" width="285" height="73.333333333333329"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of the food" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SKK-RQ-IbM">
                                                             <rect key="frame" x="76.000000000000014" y="0.0" width="133.33333333333337" height="20.333333333333332"/>
@@ -58,7 +58,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="65h-CE-ucE">
-                                                            <rect key="frame" x="0.0" y="20.333333333333332" width="285" height="52.666666666666671"/>
+                                                            <rect key="frame" x="0.0" y="20.333333333333329" width="285" height="53"/>
                                                         </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -80,8 +80,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="lowerCellImage" destination="65h-CE-ucE" id="O0n-5n-SMW"/>
-                                            <outlet property="lowerCellLabel" destination="SKK-RQ-IbM" id="w6Z-8i-ReW"/>
+                                            <outlet property="recipeCellImage" destination="65h-CE-ucE" id="O0n-5n-SMW"/>
+                                            <outlet property="recipeCellLabel" destination="SKK-RQ-IbM" id="w6Z-8i-ReW"/>
                                             <segue destination="GZT-fb-E5x" kind="showDetail" id="9N7-xE-iv6"/>
                                         </connections>
                                     </tableViewCell>
@@ -315,15 +315,15 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="0.49729773119999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="lowerCell" id="OAU-H4-rCm" customClass="RecipeTableLowerTableCell" customModule="MenuMenu" customModuleProvider="target">
-                                        <rect key="frame" x="15" y="55.333332061767578" width="305" height="94"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FoodNameRecipeCell" id="OAU-H4-rCm" customClass="RecipeCell" customModule="MenuMenu" customModuleProvider="target">
+                                        <rect key="frame" x="15" y="55.333332061767578" width="305" height="94.666664123535156"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OAU-H4-rCm" id="J4x-Kj-YdK">
-                                            <rect key="frame" x="0.0" y="0.0" width="305" height="94"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="305" height="94.666664123535156"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Dsy-mZ-5Dd">
-                                                    <rect key="frame" x="10" y="10" width="285" height="74"/>
+                                                    <rect key="frame" x="10" y="10" width="285" height="74.666666666666671"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of the food" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EcT-hb-jp5">
                                                             <rect key="frame" x="76.000000000000014" y="0.0" width="133.33333333333337" height="20.333333333333332"/>
@@ -332,7 +332,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m7a-vg-EZp">
-                                                            <rect key="frame" x="0.0" y="20.333333333333332" width="285" height="53.666666666666671"/>
+                                                            <rect key="frame" x="0.0" y="20.333333333333332" width="285" height="54.333333333333343"/>
                                                         </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -354,8 +354,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="lowerCellImage" destination="m7a-vg-EZp" id="GjN-EY-BCl"/>
-                                            <outlet property="lowerCellLabel" destination="EcT-hb-jp5" id="wmV-mP-olk"/>
+                                            <outlet property="recipeCellImage" destination="m7a-vg-EZp" id="GjN-EY-BCl"/>
+                                            <outlet property="recipeCellLabel" destination="EcT-hb-jp5" id="wmV-mP-olk"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

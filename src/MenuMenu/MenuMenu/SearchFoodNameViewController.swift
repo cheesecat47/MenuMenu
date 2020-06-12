@@ -6,6 +6,9 @@
 //  Copyright © 2020 COMP420. All rights reserved.
 //
 
+// reference
+// https://devmjun.github.io/archive/SearchController
+
 import UIKit
 
 class SearchFoodNameViewController: UIViewController {

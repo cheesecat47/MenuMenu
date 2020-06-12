@@ -68,15 +68,15 @@
                                 <rect key="frame" x="20" y="340" width="560" height="260"/>
                                 <color key="backgroundColor" white="1" alpha="0.49729773119999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="lowerCell" id="GNi-Vb-ihb" customClass="RecipeTableLowerTableCell" customModule="MenuMenu" customModuleProvider="target">
-                                        <rect key="frame" x="15" y="55.5" width="530" height="143.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="lowerCell" id="GNi-Vb-ihb" customClass="RecipeCell" customModule="MenuMenu" customModuleProvider="target">
+                                        <rect key="frame" x="15" y="55.5" width="530" height="144"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GNi-Vb-ihb" id="Z4z-Cg-aJL">
-                                            <rect key="frame" x="0.0" y="0.0" width="530" height="143.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="530" height="144"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7kj-m9-QKE">
-                                                    <rect key="frame" x="10" y="10" width="510" height="123.5"/>
+                                                    <rect key="frame" x="10" y="10" width="510" height="124"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of the food" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6qA-Jp-2dv">
                                                             <rect key="frame" x="188.5" y="0.0" width="133.5" height="20.5"/>
@@ -85,7 +85,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HAJ-RG-f1I">
-                                                            <rect key="frame" x="0.0" y="20.5" width="510" height="103"/>
+                                                            <rect key="frame" x="0.0" y="20.5" width="510" height="103.5"/>
                                                         </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -107,8 +107,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="lowerCellImage" destination="HAJ-RG-f1I" id="aPg-TG-Nm4"/>
-                                            <outlet property="lowerCellLabel" destination="6qA-Jp-2dv" id="xM2-dh-avG"/>
+                                            <outlet property="recipeCellImage" destination="HAJ-RG-f1I" id="aPg-TG-Nm4"/>
+                                            <outlet property="recipeCellLabel" destination="6qA-Jp-2dv" id="xM2-dh-avG"/>
                                             <segue destination="Cke-3S-qQY" kind="showDetail" identifier="RecipeDetail" id="z5l-I4-xjj"/>
                                         </connections>
                                     </tableViewCell>
