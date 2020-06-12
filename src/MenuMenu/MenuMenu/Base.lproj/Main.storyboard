@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TDA-yv-s4C">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qi1-CK-gmV">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--검색-->
+        <!--재료 목록으로 검색-->
         <scene sceneID="cGW-t9-dIP">
             <objects>
                 <viewController id="vXt-a4-gCZ" customClass="RecipeListViewController" customModule="MenuMenu" customModuleProvider="target" sceneMemberID="viewController">
@@ -15,39 +15,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="a43-fL-lC1">
-                                <rect key="frame" x="20" y="108" width="335" height="46"/>
-                                <subviews>
-                                    <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Eph-E8-GJr">
-                                        <rect key="frame" x="0.0" y="0.0" width="279" height="46"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <scopeButtonTitles>
-                                            <string>Title</string>
-                                            <string>Title</string>
-                                        </scopeButtonTitles>
-                                    </searchBar>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vG6-LY-SSv">
-                                        <rect key="frame" x="287" y="1" width="48" height="43.666666666666671"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="48" id="W39-5Q-cjT"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <state key="normal" backgroundImage="camera" catalog="system"/>
-                                        <connections>
-                                            <segue destination="NLa-Ml-H8V" kind="showDetail" id="1ph-Gx-Yez"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="46" id="hKH-wS-Pww"/>
-                                </constraints>
-                            </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="MM3-bq-6Po">
-                                <rect key="frame" x="20" y="174" width="335" height="180"/>
+                                <rect key="frame" x="20" y="108" width="335" height="250"/>
                                 <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="180" id="E6o-po-6NN"/>
+                                    <constraint firstAttribute="height" constant="250" id="E6o-po-6NN"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="upperCell" id="CkR-Xn-prE">
@@ -66,18 +38,18 @@
                                 </connections>
                             </tableView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="uhN-VD-sVp">
-                                <rect key="frame" x="20" y="374" width="335" height="404"/>
+                                <rect key="frame" x="20" y="378" width="335" height="331"/>
                                 <color key="backgroundColor" white="1" alpha="0.49729773116438358" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="lowerCell" id="bdY-da-Rww" customClass="RecipeTableLowerTableCell" customModule="MenuMenu" customModuleProvider="target">
-                                        <rect key="frame" x="15" y="55.333332061767578" width="305" height="95.333335876464844"/>
+                                        <rect key="frame" x="15" y="55.333332061767578" width="305" height="92.666664123535156"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bdY-da-Rww" id="Ofx-ls-4Mj">
-                                            <rect key="frame" x="0.0" y="0.0" width="305" height="95.333335876464844"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="305" height="92.666664123535156"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ho4-st-dJd">
-                                                    <rect key="frame" x="10" y="10" width="285" height="75.333333333333329"/>
+                                                    <rect key="frame" x="10" y="10" width="285" height="72.666666666666671"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of the food" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SKK-RQ-IbM">
                                                             <rect key="frame" x="76.000000000000014" y="0.0" width="133.33333333333337" height="20.333333333333332"/>
@@ -86,7 +58,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="65h-CE-ucE">
-                                                            <rect key="frame" x="0.0" y="20.333333333333329" width="285" height="55"/>
+                                                            <rect key="frame" x="0.0" y="20.333333333333332" width="285" height="52.333333333333343"/>
                                                         </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -110,7 +82,7 @@
                                         <connections>
                                             <outlet property="lowerCellImage" destination="65h-CE-ucE" id="O0n-5n-SMW"/>
                                             <outlet property="lowerCellLabel" destination="SKK-RQ-IbM" id="w6Z-8i-ReW"/>
-                                            <segue destination="GZT-fb-E5x" kind="showDetail" identifier="RecipeDetail" id="Aly-az-8we"/>
+                                            <segue destination="GZT-fb-E5x" kind="showDetail" id="9N7-xE-iv6"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -118,24 +90,17 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.72156862749999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="MM3-bq-6Po" firstAttribute="centerX" secondItem="Ayt-M0-vRv" secondAttribute="centerX" id="6RK-9P-NXl"/>
                             <constraint firstItem="Ayt-M0-vRv" firstAttribute="trailing" secondItem="MM3-bq-6Po" secondAttribute="trailing" constant="20" id="7Ty-3a-y0Q"/>
-                            <constraint firstItem="uhN-VD-sVp" firstAttribute="centerX" secondItem="Ayt-M0-vRv" secondAttribute="centerX" id="BTA-vl-xRw"/>
+                            <constraint firstItem="MM3-bq-6Po" firstAttribute="top" secondItem="Ayt-M0-vRv" secondAttribute="top" constant="20" id="HdP-vp-FTa"/>
                             <constraint firstItem="MM3-bq-6Po" firstAttribute="leading" secondItem="Ayt-M0-vRv" secondAttribute="leading" constant="20" id="PFT-dz-khG"/>
                             <constraint firstItem="uhN-VD-sVp" firstAttribute="leading" secondItem="Ayt-M0-vRv" secondAttribute="leading" constant="20" id="VOd-vz-EIZ"/>
-                            <constraint firstItem="MM3-bq-6Po" firstAttribute="top" secondItem="a43-fL-lC1" secondAttribute="bottom" constant="20" id="X1R-8f-2mY"/>
                             <constraint firstItem="Ayt-M0-vRv" firstAttribute="trailing" secondItem="uhN-VD-sVp" secondAttribute="trailing" constant="20" id="law-pN-ZCi"/>
-                            <constraint firstItem="Ayt-M0-vRv" firstAttribute="bottom" secondItem="uhN-VD-sVp" secondAttribute="bottom" id="mnZ-zh-Zen"/>
-                            <constraint firstItem="a43-fL-lC1" firstAttribute="leading" secondItem="Ayt-M0-vRv" secondAttribute="leading" constant="20" id="pOb-vf-3vJ"/>
-                            <constraint firstItem="a43-fL-lC1" firstAttribute="centerX" secondItem="Ayt-M0-vRv" secondAttribute="centerX" id="q11-7v-DUo"/>
-                            <constraint firstItem="uhN-VD-sVp" firstAttribute="centerY" relation="greaterThanOrEqual" secondItem="MM3-bq-6Po" secondAttribute="centerY" constant="50" id="t4F-nb-oZb"/>
-                            <constraint firstItem="a43-fL-lC1" firstAttribute="top" secondItem="Ayt-M0-vRv" secondAttribute="top" constant="20" id="uyf-nd-UWp"/>
+                            <constraint firstItem="Ayt-M0-vRv" firstAttribute="bottom" secondItem="uhN-VD-sVp" secondAttribute="bottom" constant="20" id="mnZ-zh-Zen"/>
                             <constraint firstItem="uhN-VD-sVp" firstAttribute="top" secondItem="MM3-bq-6Po" secondAttribute="bottom" constant="20" id="xs6-3V-kuV"/>
-                            <constraint firstItem="Ayt-M0-vRv" firstAttribute="trailing" secondItem="a43-fL-lC1" secondAttribute="trailing" constant="20" id="z4v-AI-Vkd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ayt-M0-vRv"/>
                     </view>
-                    <navigationItem key="navigationItem" title="검색" id="hRh-aa-YGh"/>
+                    <navigationItem key="navigationItem" title="재료 목록으로 검색" id="hRh-aa-YGh"/>
                     <connections>
                         <outlet property="lowerTableView" destination="uhN-VD-sVp" id="mvb-Ml-tc2"/>
                         <outlet property="upperTableView" destination="MM3-bq-6Po" id="VAW-Rl-idy"/>
@@ -143,21 +108,21 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TcX-o5-k8X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1226.0869565217392" y="-502.23214285714283"/>
+            <point key="canvasLocation" x="1268" y="-502"/>
         </scene>
-        <!--사진 가져오기-->
+        <!--음식 사진으로 검색-->
         <scene sceneID="wtX-Pt-mJA">
             <objects>
                 <viewController id="NLa-Ml-H8V" customClass="FoodCameraController" customModule="MenuMenu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hSl-Yc-aMs">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Lb-Mn-4Cu">
-                                <rect key="frame" x="20" y="20" width="335" height="636"/>
+                                <rect key="frame" x="20" y="108" width="335" height="533"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C1l-5s-9vX">
-                                <rect key="frame" x="20" y="676" width="335" height="48"/>
+                                <rect key="frame" x="20" y="661" width="335" height="48"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="이 사진으로 음식 검색">
@@ -170,7 +135,7 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.72156862749999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="bUQ-6Y-Eci" firstAttribute="bottom" secondItem="C1l-5s-9vX" secondAttribute="bottom" id="8jF-cC-ewE"/>
+                            <constraint firstItem="bUQ-6Y-Eci" firstAttribute="bottom" secondItem="C1l-5s-9vX" secondAttribute="bottom" constant="20" id="8jF-cC-ewE"/>
                             <constraint firstItem="bUQ-6Y-Eci" firstAttribute="trailing" secondItem="C1l-5s-9vX" secondAttribute="trailing" constant="20" id="WfY-qt-8BW"/>
                             <constraint firstItem="9Lb-Mn-4Cu" firstAttribute="leading" secondItem="bUQ-6Y-Eci" secondAttribute="leading" constant="20" id="jEC-Ux-2TF"/>
                             <constraint firstItem="bUQ-6Y-Eci" firstAttribute="trailing" secondItem="9Lb-Mn-4Cu" secondAttribute="trailing" constant="20" id="ltD-ve-t9q"/>
@@ -180,7 +145,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bUQ-6Y-Eci"/>
                     </view>
-                    <navigationItem key="navigationItem" title="사진 가져오기" id="hDq-sP-HgT">
+                    <navigationItem key="navigationItem" title="음식 사진으로 검색" id="hDq-sP-HgT">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="22c-GB-yDi">
                             <connections>
                                 <action selector="foodImageAddAction:" destination="NLa-Ml-H8V" id="fjf-Hy-bco"/>
@@ -193,7 +158,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K3V-7U-KMg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2100" y="-502.23214285714283"/>
+            <point key="canvasLocation" x="1268" y="202"/>
         </scene>
         <!--이미지 분석-->
         <scene sceneID="IIJ-Vh-jvK">
@@ -224,7 +189,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YK0-B9-FSV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2986.9565217391305" y="-502.23214285714283"/>
+            <point key="canvasLocation" x="2198" y="202"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="D3y-GV-z3K">
@@ -335,12 +300,48 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6qX-34-k0c" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1225" y="238"/>
+            <point key="canvasLocation" x="2198" y="-502"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--음식 이름으로 검색-->
+        <scene sceneID="syC-tv-6zJ">
+            <objects>
+                <viewController id="wcj-TF-8O8" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MR9-ZZ-vas">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.72156862745098038" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="9qG-15-bWD"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="음식 이름으로 검색" id="v75-uz-c4H"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6sh-49-Pgh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1268" y="-1229.5566502463055"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="mD3-bQ-wCE">
+            <objects>
+                <tabBarController id="Qi1-CK-gmV" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tdz-L5-0Pb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="iKj-eR-EtQ" kind="relationship" relationship="viewControllers" id="moI-Hd-jwA"/>
+                        <segue destination="TDA-yv-s4C" kind="relationship" relationship="viewControllers" id="PVv-WB-5xL"/>
+                        <segue destination="G3K-lv-tzk" kind="relationship" relationship="viewControllers" id="FZx-Lu-oVV"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="abO-uy-Evc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-761" y="-502"/>
+        </scene>
+        <!--재료 목록으로 검색-->
         <scene sceneID="LRd-JB-q6y">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TDA-yv-s4C" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="재료 목록으로 검색" image="checkmark.circle" catalog="system" id="z9e-fB-NzQ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zxA-Q3-rOJ">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
@@ -355,8 +356,48 @@
             </objects>
             <point key="canvasLocation" x="326" y="-502"/>
         </scene>
+        <!--음식 사진으로 검색-->
+        <scene sceneID="twH-C5-kI1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="G3K-lv-tzk" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="음식 사진으로 검색" image="camera" catalog="system" id="7HI-2o-Yib"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sVZ-0q-ptG">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="NLa-Ml-H8V" kind="relationship" relationship="rootViewController" id="ZUb-qk-DHJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QVH-gF-2AX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="336.80000000000001" y="201.72413793103451"/>
+        </scene>
+        <!--음식 이름으로 검색-->
+        <scene sceneID="Kcc-Ln-Tw3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iKj-eR-EtQ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="음식 이름으로 검색" image="magnifyingglass" catalog="system" id="hjP-lv-vjl"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Np4-4H-ky8">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="wcj-TF-8O8" kind="relationship" relationship="rootViewController" id="uxP-VR-hBZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ytd-I4-Y2b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="325.60000000000002" y="-1229.5566502463055"/>
+        </scene>
     </scenes>
     <resources>
         <image name="camera" catalog="system" width="128" height="96"/>
+        <image name="checkmark.circle" catalog="system" width="128" height="121"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
     </resources>
 </document>
