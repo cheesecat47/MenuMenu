@@ -310,20 +310,65 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rMg-rz-855">
+                                <rect key="frame" x="20" y="108" width="335" height="601"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="recipeNameCellTest" id="71f-Yx-cod">
+                                        <rect key="frame" x="0.0" y="28" width="335" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="71f-Yx-cod" id="Nvb-5k-mVd">
+                                            <rect key="frame" x="0.0" y="0.0" width="335" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="wcj-TF-8O8" id="0bB-IG-2cA"/>
+                                    <outlet property="delegate" destination="wcj-TF-8O8" id="DtR-Z7-egb"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.72156862745098038" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rMg-rz-855" firstAttribute="leading" secondItem="9qG-15-bWD" secondAttribute="leading" constant="20" id="A3y-M6-jDy"/>
+                            <constraint firstItem="rMg-rz-855" firstAttribute="top" secondItem="9qG-15-bWD" secondAttribute="top" constant="20" id="I0I-o1-JWN"/>
+                            <constraint firstItem="9qG-15-bWD" firstAttribute="bottom" secondItem="rMg-rz-855" secondAttribute="bottom" constant="20" id="TnM-yM-T8N"/>
+                            <constraint firstItem="9qG-15-bWD" firstAttribute="trailing" secondItem="rMg-rz-855" secondAttribute="trailing" constant="20" id="wuO-ye-K10"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9qG-15-bWD"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="음식 이름으로 검색" id="v75-uz-c4H"/>
+                    <connections>
+                        <outlet property="tableView" destination="rMg-rz-855" id="EpA-CQ-GpC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6sh-49-Pgh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1268" y="-1229.5566502463055"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="JnA-az-3gT">
+            <objects>
+                <viewController id="UBZ-5x-M4l" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0d1-zy-nKz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Zfn-ky-Xnt">
-                                <rect key="frame" x="20" y="373" width="335" height="331"/>
+                                <rect key="frame" x="24" y="332" width="335" height="331"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="0.49729773119999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FoodNameRecipeCell" id="OAU-H4-rCm" customClass="RecipeCell" customModule="MenuMenu" customModuleProvider="target">
-                                        <rect key="frame" x="15" y="55.333332061767578" width="305" height="94.666664123535156"/>
+                                        <rect key="frame" x="15" y="55.333332061767578" width="305" height="96.333335876464844"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OAU-H4-rCm" id="J4x-Kj-YdK">
-                                            <rect key="frame" x="0.0" y="0.0" width="305" height="94.666664123535156"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="305" height="96.333335876464844"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Dsy-mZ-5Dd">
-                                                    <rect key="frame" x="10" y="10" width="285" height="74.666666666666671"/>
+                                                    <rect key="frame" x="10" y="10" width="285" height="76.333333333333329"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of the food" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EcT-hb-jp5">
                                                             <rect key="frame" x="76.000000000000014" y="0.0" width="133.33333333333337" height="20.333333333333332"/>
@@ -332,7 +377,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m7a-vg-EZp">
-                                                            <rect key="frame" x="0.0" y="20.333333333333332" width="285" height="54.333333333333343"/>
+                                                            <rect key="frame" x="0.0" y="20.333333333333329" width="285" height="56"/>
                                                         </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -361,14 +406,13 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.72156862745098038" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="9qG-15-bWD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="O2K-Gv-RKQ"/>
                     </view>
-                    <navigationItem key="navigationItem" title="음식 이름으로 검색" id="v75-uz-c4H"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6sh-49-Pgh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5tj-Mp-AXF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1268" y="-1229.5566502463055"/>
+            <point key="canvasLocation" x="2198" y="-1230"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="mD3-bQ-wCE">
