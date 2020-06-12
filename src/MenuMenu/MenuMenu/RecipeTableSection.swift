@@ -10,28 +10,33 @@ import Foundation
 
 class RecipeTable {
     
-    let cellTitle: [String] = ["채소류","육류","향신료"]
-    let ingredients: [String:Array<String>] = [
-        "채소류": ["당근","양파","파","마늘"],
-        "육류": ["소고기","양고기","돼지고기","닭고기"],
-        "향신료": ["소금","후추"]
-    ]
+//    let cellTitle: [String] = ["채소류","육류","향신료"]
+//    let ingredients: [String:Array<String>] = [
+//        "채소류": ["당근","양파","파","마늘"],
+//        "육류": ["소고기","양고기","돼지고기","닭고기"],
+//        "향신료": ["소금","후추"]
+//    ]
+    private let ingredientNames: [String]
     
-    var sections : [Int:Section] = [:]
+    private var sections : [Int:Section] = [:]
     func getSections() -> [Int:Section] {
         return self.sections
     }
     
-    static var identifierFactory = -1
+    private static var identifierFactory = -1
     static func getUniqueId() -> Int {
         identifierFactory += 1
         return identifierFactory
     }
     
     init() {
-        for key in cellTitle {
-            sections[RecipeTable.getUniqueId()] = Section(isMultiple: true, title: key, items: ingredients[key]!)
-        }
+        self.ingredientNames = RecipeRepository.shared.getAllIngredientName()
+        dump("RecipeTable: ingredientNames \(ingredientNames)")
+        sections[RecipeTable.getUniqueId()] = Section(isMultiple: true, title: "재료 목록", items: self.ingredientNames)
+        
+//        for key in self.cellTitle {
+//            sections[RecipeTable.getUniqueId()] = Section(isMultiple: true, title: key, items: self.ingredients[key]!)
+//        }
 //        dump("RecipeTableSection: init: sections: \(sections)")
     }
 }

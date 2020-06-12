@@ -52,23 +52,57 @@ class ViewController: UIViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        let testImageURL = URL(string: "https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png")
-        if image == nil {
-                imageURL = testImageURL
-        }
-        // Do any additional setup after loading the view.
-    }
         
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        // ex1) Get All RecipeSummaryView
+        if let views = RecipeRepository.shared.getAllRecipeSummaryViews(){
+            for (_, view) in views.enumerated() {
+                print("id: \(view.id)")
+                print("name: \(view.foodName)")
+                print("imagePath: \(String(describing: view.imgPath?.absoluteString))\n")
+            }
+        }
+        
+        // ex2) Get All Recipes
+        if let recipes = RecipeRepository.shared.getAllRecipes() {
+            for (_, recipe) in recipes {
+                print("id : \(recipe.id)")
+                print("name: \(recipe.foodName)")
+                print("imgPath:  \(String(describing: recipe.imgPath?.absoluteString))") // 테스트용이라 옵셔널 무시
+                print("----Ingredients----")
+                for (i, ingredient) in recipe.ingredients.enumerated() {
+                    print("\(i+1). \(ingredient.name) \(ingredient.amount)")
+                }
+                print("----How to make----")
+                for (i, process) in recipe.process.enumerated() {
+                    print("\(i+1). \(process)")
+                }
+                print("")
+            }
+        }
+        
+        // ex3) Get Recipe by ID
+        if let recipe = RecipeRepository.shared.getRecipeById(id: 10){
+            print("id : \(recipe.id)")
+            print("name: \(recipe.foodName)")
+            print("filePath:  \(String(describing: recipe.imgPath?.absoluteString))")
+            print("----Ingredients----")
+            for (i, ingredient) in recipe.ingredients.enumerated() {
+                print("\(i+1). \(ingredient.name) \(ingredient.amount)")
+            }
+            print("----How to make----")
+            for (i, process) in recipe.process.enumerated() {
+                print("\(i+1). \(process)")
+            }
+            print("")
+        }
+        
+        
+        // ex4) Get All Ingredient Names
+        print("----Ingredients List----")
+        let ingredientNames = RecipeRepository.shared.getAllIngredientName()
+        for (i, name) in ingredientNames.enumerated() {
+            print("\(i). \(name)")
+        }
     }
-    */
-
 }
 
