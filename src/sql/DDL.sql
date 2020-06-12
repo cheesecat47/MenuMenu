@@ -12,6 +12,7 @@ CREATE TABLE "recipe_ingredient" (
 	"ingredient_id"	INTEGER,
 	"ingredient_name"	TEXT NOT NULL,
 	"amount"	TEXT,
+	"type" TEXT,
 	PRIMARY KEY("ingredient_id")
     FOREIGN KEY("recipe_id") REFERENCES recipe_basic("recipe_id")
 );
