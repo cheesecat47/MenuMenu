@@ -10,16 +10,24 @@ import Foundation
 import SQLite3
 class DBManager {
     static let shared = DBManager()
-    private let fileURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent("menumenu.sqlite")
+    private let dbURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent("menumenu.sqlite")
     private var db:OpaquePointer?
     private init(){
+        // Copy database from Bundle to Document
+        let url = Bundle.main.resourceURL?.appendingPathComponent("menumenu.sqlite")
+        print((url?.path)!)
+        do {
+            try FileManager.default.copyItem(atPath: (url?.path)!, toPath: dbURL.path)
+        } catch let error as NSError {
+            print("!!! ERROR copy db from bundle to filesystem fail:\n\(error)")
+        }
     }
     
     func openDatabase() {
-        if sqlite3_open(self.fileURL.path, &(self.db)) != SQLITE_OK {
+        if sqlite3_open(self.dbURL.path, &(self.db)) != SQLITE_OK {
             print("!!! Error Opening Database")
         } else {
-            print("File path: \(self.fileURL.path)") // DEBUG
+            print("File path: \(self.dbURL.path)") // DEBUG
         }
     }
     
