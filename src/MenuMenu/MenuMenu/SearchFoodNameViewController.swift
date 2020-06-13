@@ -48,9 +48,14 @@ class SearchFoodNameViewController: UIViewController {
         // Pass the selected object to the new view controller.
         if segue.identifier == "showRecipeDetail" {
             if let indexPath = tableView.indexPathForSelectedRow {
-                let recipe = recipes[indexPath.row]
+                let recipe: Recipe
+                if isFiltering() {
+                    recipe = filteredRecipes[indexPath.row]
+                } else {
+                    recipe = recipes[indexPath.row]
+                }
                 let controller = segue.destination as! ViewController
-                controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
+//                controller.detailRecipe = recipe
                 controller.navigationItem.leftItemsSupplementBackButton = true
             }
         }
