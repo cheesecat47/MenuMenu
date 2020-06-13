@@ -36,9 +36,24 @@ class SearchIngredientsViewController: UIViewController {
     var recipeTable = RecipeTable()
     lazy var sections = recipeTable.getSections()
     
-    var searchResultDic: [Int:Recipe] = [:] {
+//    var searchResultArr: [Recipe] = []
+    var searchResultArr: [Recipe] = [
+        RecipeRepository.shared.getRecipeById(id: 1)!,
+        RecipeRepository.shared.getRecipeById(id: 2)!,
+        RecipeRepository.shared.getRecipeById(id: 3)!
+        ] {
         didSet {
-            dump("searchResultDic: \(searchResultDic)")
+            dump("SearchIngredientsViewController: searchResultArr: didSet: \(searchResultArr)")
+        }
+    }
+    var searchResultDic: [Int:String] = [:] {
+        didSet {
+//            dump("SearchIngredientsViewController: searchResultDic: didSet: \(searchResultDic)")
+            // 선택된 재료 목록이 바뀔 때마다
+//            searchResultArr.removeAll() // lowerTable에 들어갈 목록 클리어.
+            let ingredientConcated = searchResultDic.values.joined(separator: ",")
+            dump("SearchIngredientsViewController: searchResultDic: didSet: ingredientConcated \(ingredientConcated)")
+            // 이거로 db에 쿼리
         }
     }
 }
@@ -59,7 +74,7 @@ extension SearchIngredientsViewController: UITableViewDataSource {
         if tableView == upperTableView {
             return (sections[section]?.items.count)!
         } else {
-            return 10
+            return searchResultArr.count
         }
     }
         
@@ -81,8 +96,23 @@ extension SearchIngredientsViewController: UITableViewDataSource {
             return cell
         } else {
             let cell: RecipeCell = tableView.dequeueReusableCell(withIdentifier: lowerCellIdentifier, for: indexPath) as! RecipeCell
-            cell.recipeCellLabel?.text = "food name"
-            cell.recipeCellImage?.image = UIImage(named: "carrot.jpg")
+            let item = searchResultArr[indexPath.row]
+            
+            cell.recipeCellLabel?.text = item.foodName
+            if let url = item.imgPath {
+                // MultiThreading
+                DispatchQueue.global(qos: .userInitiated).async { [weak cell] in
+                    let urlContents = try? Data(contentsOf: url)
+                    DispatchQueue.main.async {
+                        if let imgData = urlContents, url == item.imgPath {
+                            cell?.recipeCellImage?.image = UIImage(data: imgData)
+                        }
+                    }
+                }
+            } else {
+                cell.recipeCellImage?.image = UIImage(named: "carrot.jpg")
+            }
+
 //            dump("\(cell)")
             return cell
         }
@@ -114,13 +144,8 @@ extension SearchIngredientsViewController: UITableViewDelegate {
             self.upperTableView.reloadRows(at: [indexPath], with: .automatic)
             
             if item.selected {
-                // 만약 체크 상태면 db에 쿼리해서 Recipe 객체 가져오고
-                guard let selectedRecipe = RecipeRepository.shared.getRecipeById(id: item.id) else {
-                    dump("SearchIngredientsViewController: upperTableView: no selected recipe")
-                    return
-                }
-                // 딕셔너리에 추가
-                searchResultDic[item.id] = selectedRecipe
+                // 만약 체크 상태면 id랑 재료이름 딕셔너리에 추가
+                searchResultDic[item.id] = item.name
             } else {
                 // 체크 해제하면 딕셔너리에서 제거
                 searchResultDic.removeValue(forKey: item.id)
