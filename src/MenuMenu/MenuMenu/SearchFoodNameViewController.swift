@@ -42,24 +42,33 @@ class SearchFoodNameViewController: UIViewController {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
+    */
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "showRecipeDetail" {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let recipe = recipes[indexPath.row]
+                let controller = segue.destination as! ViewController
+                controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
+                controller.navigationItem.leftItemsSupplementBackButton = true
+            }
+        }
     }
-    */
+
 
 }
 
 
 extension SearchFoodNameViewController: UISearchResultsUpdating {
     func searchBarIsEmpty() -> Bool {
-        dump("SearchFoodNameViewController: searchBarIsEmpty")
+//        dump("SearchFoodNameViewController: searchBarIsEmpty")
         return searchController.searchBar.text?.isEmpty ?? true
     }
     
     func filterContentForSearchText(_ searchText: String, scope: String = "ALL") {
         // searchText를 기반으로 filteredRecipes 배열에 방금 추가한 결과를 놓음.
-        dump("SearchFoodNameViewController: filterContentForSearchText")
+//        dump("SearchFoodNameViewController: filterContentForSearchText")
         filteredRecipes = recipes.filter({(recipe:Recipe) -> Bool in
             return recipe.foodName.contains(searchText)
         })
@@ -68,12 +77,12 @@ extension SearchFoodNameViewController: UISearchResultsUpdating {
     
     func updateSearchResults(for searchController: UISearchController) {
         // update search results based on user's input
-        dump("SearchFoodNameViewController: updateSearchResult")
+//        dump("SearchFoodNameViewController: updateSearchResult")
         filterContentForSearchText(searchController.searchBar.text!)
     }
     
     func isFiltering() -> Bool {
-        dump("SearchFoodNameViewController: isFiltering")
+//        dump("SearchFoodNameViewController: isFiltering")
         return searchController.isActive && !searchBarIsEmpty()
     }
 }
@@ -95,7 +104,7 @@ extension SearchFoodNameViewController: UITableViewDataSource {
         
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // 각 셀을 반환.
-        let cell = tableView.dequeueReusableCell(withIdentifier: "recipeNameCellTest", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SearchFoodNameCell", for: indexPath)
         
         let recipe: Recipe
         if isFiltering() {
