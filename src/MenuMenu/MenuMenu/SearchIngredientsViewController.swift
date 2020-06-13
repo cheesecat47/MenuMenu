@@ -99,21 +99,23 @@ extension SearchIngredientsViewController: UITableViewDataSource {
             let item = searchResultArr[indexPath.row]
             
             cell.recipeCellLabel?.text = item.foodName
+            cell.recipeCellImage?.image = UIImage(named: "carrot.jpg") // 디폴트 이미지
             if let url = item.imgPath {
+                // https://slobell.com/blogs/54
+                // 공공데이터에서 사용하는 음식 대표이미지 주소가 http라서 보안 설정에 걸림.
+                // info.plist에 설정.
+                
                 // MultiThreading
                 DispatchQueue.global(qos: .userInitiated).async { [weak cell] in
                     let urlContents = try? Data(contentsOf: url)
                     DispatchQueue.main.async {
-                        if let imgData = urlContents, url == item.imgPath {
+                        if let imgData = urlContents {
                             cell?.recipeCellImage?.image = UIImage(data: imgData)
                         }
                     }
                 }
-            } else {
-                cell.recipeCellImage?.image = UIImage(named: "carrot.jpg")
             }
 
-//            dump("\(cell)")
             return cell
         }
     }
