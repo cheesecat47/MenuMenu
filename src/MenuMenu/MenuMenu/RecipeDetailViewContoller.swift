@@ -15,7 +15,7 @@ class RecipeDetailViewContoller: UIViewController {
 
     @IBOutlet weak var recipeDetailNameLabel: UILabel!
     @IBOutlet weak var recipeDetailImageView: UIImageView!
-    @IBOutlet weak var recipeDetailTableView: UITableView!
+    @IBOutlet weak var recipeDetailTableView: UITextView!
     @IBOutlet weak var recipeDetailDescriptionLabel: UITextView!
     
     
@@ -37,15 +37,23 @@ class RecipeDetailViewContoller: UIViewController {
             // set image
             self.imageURL = detailRecipe.imgPath
             // set ingredient table
-            
-            // set description
             if let recipeDetailDescriptionLabel = recipeDetailDescriptionLabel {
-                var processConcate = "---------- 요리 순서 ----------\n"
+                var processConcate = ""
                 for (i, thisProcess) in detailRecipe.process.enumerated(){
                     processConcate += "\(i+1). \(thisProcess)\n"
                 }
                 dump("RecipeDetailViewContoller: configureView: \(String(describing: processConcate))")
                 recipeDetailDescriptionLabel.text = processConcate
+            }
+            
+            // set description
+            if let recipeDetailTableView = recipeDetailTableView {
+                var ingredientsConcate = ""
+                for (i, ingredient) in detailRecipe.ingredients.enumerated(){
+                    ingredientsConcate += "\(i+1). \(ingredient.name) \(ingredient.amount)\n"
+                }
+                dump("RecipeDetailViewContoller: configureView: \(String(describing: ingredientsConcate))")
+                recipeDetailTableView.text = ingredientsConcate
             }
         }
     }

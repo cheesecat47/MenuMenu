@@ -203,7 +203,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="MsX-uQ-bh8">
-                                <rect key="frame" x="177.66666666666666" y="171.66666666666666" width="20" height="20"/>
+                                <rect key="frame" x="177.66666666666666" y="136.33333333333334" width="20" height="20"/>
                             </activityIndicatorView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ljw-9Z-U02">
                                 <rect key="frame" x="20" y="13" width="335" height="685.66666666666663"/>
@@ -218,57 +218,36 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lB1-1t-24o">
-                                        <rect key="frame" x="0.0" y="58.333333333333329" width="335" height="220.33333333333337"/>
+                                        <rect key="frame" x="0.0" y="58.333333333333314" width="335" height="150"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="lB1-1t-24o" secondAttribute="height" multiplier="187:123" id="3be-Bt-nSS"/>
+                                            <constraint firstAttribute="height" constant="150" id="ke9-TS-5F7"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="필요한 재료 목록" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="74M-6F-szc">
-                                        <rect key="frame" x="89.666666666666686" y="286.66666666666669" width="156" height="28.666666666666686"/>
+                                        <rect key="frame" x="89.666666666666686" y="216.33333333333334" width="156" height="28.666666666666657"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mAV-EE-f3k">
-                                        <rect key="frame" x="0.0" y="323.33333333333331" width="335" height="139.66666666666669"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="T0I-t6-Rcs">
+                                        <rect key="frame" x="0.0" y="253" width="335" height="150"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="mAV-EE-f3k" secondAttribute="height" multiplier="187:78" id="FKq-jJ-Ljg"/>
+                                            <constraint firstAttribute="height" constant="150" id="UWL-mz-iQj"/>
                                         </constraints>
-                                        <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="recipeDetailIngredientCell" id="muK-n9-9PS">
-                                                <rect key="frame" x="0.0" y="28" width="335" height="43.666667938232422"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="muK-n9-9PS" id="53J-Os-Lcr">
-                                                    <rect key="frame" x="0.0" y="0.0" width="335" height="43.666667938232422"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="고춧가루" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zlz-N9-qSm">
-                                                            <rect key="frame" x="50.000000000000007" y="9.3333333333333339" width="72.666666666666686" height="25.333333333333329"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1큰술" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BZW-ly-a3C">
-                                                            <rect key="frame" x="245.66666666666666" y="11.000000000000002" width="39.333333333333343" height="21.666666666666671"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                    <constraints>
-                                                        <constraint firstItem="zlz-N9-qSm" firstAttribute="leading" secondItem="53J-Os-Lcr" secondAttribute="leading" constant="50" id="Crh-kl-NZk"/>
-                                                        <constraint firstAttribute="trailing" secondItem="BZW-ly-a3C" secondAttribute="trailing" constant="50" id="MQb-iP-qjP"/>
-                                                        <constraint firstItem="BZW-ly-a3C" firstAttribute="centerY" secondItem="53J-Os-Lcr" secondAttribute="centerY" id="SYX-8v-tlE"/>
-                                                        <constraint firstItem="zlz-N9-qSm" firstAttribute="centerY" secondItem="53J-Os-Lcr" secondAttribute="centerY" id="blC-Ej-B40"/>
-                                                        <constraint firstItem="BZW-ly-a3C" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="zlz-N9-qSm" secondAttribute="trailing" constant="8" symbolic="YES" id="t8t-yL-0bK"/>
-                                                    </constraints>
-                                                </tableViewCellContentView>
-                                            </tableViewCell>
-                                        </prototypes>
-                                    </tableView>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="요리 순서" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVU-MN-HBC">
+                                        <rect key="frame" x="123.33333333333334" y="411" width="88.333333333333343" height="28.666666666666686"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PQI-XY-buj">
-                                        <rect key="frame" x="0.0" y="471.00000000000006" width="335" height="214.66666666666669"/>
+                                        <rect key="frame" x="0.0" y="447.66666666666674" width="335" height="238"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -279,13 +258,13 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="lB1-1t-24o" secondAttribute="trailing" id="5Cr-3Z-Quw"/>
                                     <constraint firstItem="lB1-1t-24o" firstAttribute="leading" secondItem="ljw-9Z-U02" secondAttribute="leading" id="65c-vO-MfS"/>
+                                    <constraint firstItem="T0I-t6-Rcs" firstAttribute="leading" secondItem="ljw-9Z-U02" secondAttribute="leading" id="8sr-8a-Ykp"/>
                                     <constraint firstAttribute="trailing" secondItem="PQI-XY-buj" secondAttribute="trailing" id="BxT-lb-dtd"/>
-                                    <constraint firstAttribute="trailing" secondItem="mAV-EE-f3k" secondAttribute="trailing" id="Mn7-Ya-5MY"/>
+                                    <constraint firstAttribute="trailing" secondItem="T0I-t6-Rcs" secondAttribute="trailing" id="KVv-V0-65y"/>
                                     <constraint firstItem="08h-SI-UBt" firstAttribute="centerX" secondItem="ljw-9Z-U02" secondAttribute="centerX" id="PdR-SV-3Hh"/>
                                     <constraint firstItem="74M-6F-szc" firstAttribute="centerX" secondItem="ljw-9Z-U02" secondAttribute="centerX" id="VF8-RP-zSb"/>
                                     <constraint firstItem="PQI-XY-buj" firstAttribute="leading" secondItem="ljw-9Z-U02" secondAttribute="leading" id="XVN-j5-rvs"/>
                                     <constraint firstItem="08h-SI-UBt" firstAttribute="top" secondItem="ljw-9Z-U02" secondAttribute="top" id="mw7-1f-tht"/>
-                                    <constraint firstItem="mAV-EE-f3k" firstAttribute="leading" secondItem="ljw-9Z-U02" secondAttribute="leading" id="zJ3-kC-v1F"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -306,7 +285,7 @@
                         <outlet property="recipeDetailDescriptionLabel" destination="PQI-XY-buj" id="lSL-Va-di3"/>
                         <outlet property="recipeDetailImageView" destination="lB1-1t-24o" id="ReI-ag-XdY"/>
                         <outlet property="recipeDetailNameLabel" destination="08h-SI-UBt" id="qJD-wg-aSH"/>
-                        <outlet property="recipeDetailTableView" destination="mAV-EE-f3k" id="lxI-7B-jNu"/>
+                        <outlet property="recipeDetailTableView" destination="T0I-t6-Rcs" id="yLw-yz-rrJ"/>
                         <outlet property="spinner" destination="MsX-uQ-bh8" id="ePj-YT-UR9"/>
                     </connections>
                 </viewController>
