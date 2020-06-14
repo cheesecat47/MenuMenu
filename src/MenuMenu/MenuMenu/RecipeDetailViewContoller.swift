@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class RecipeDetailViewContoller: UIViewController {
 
     var imageView = UIImageView()
     var imageURL: URL? {
