@@ -7,18 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44218FFB2493CF860087E717 /* SearchFoodNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44218FFA2493CF860087E717 /* SearchFoodNameViewController.swift */; };
 		4442F27C2479236700A7E2FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4442F27B2479236700A7E2FA /* AppDelegate.swift */; };
 		4442F27E2479236700A7E2FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4442F27D2479236700A7E2FA /* SceneDelegate.swift */; };
 		4442F2802479236700A7E2FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4442F27F2479236700A7E2FA /* ViewController.swift */; };
 		4442F2832479236700A7E2FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4442F2812479236700A7E2FA /* Main.storyboard */; };
 		4442F2852479237300A7E2FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4442F2842479237300A7E2FA /* Assets.xcassets */; };
 		4442F2882479237300A7E2FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4442F2862479237300A7E2FA /* LaunchScreen.storyboard */; };
-		446840F22488FF0C00DD70EA /* FoodCameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446840F12488FF0C00DD70EA /* FoodCameraController.swift */; };
-		4495368A248286470066A115 /* RecipeTableLowerTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44953689248286470066A115 /* RecipeTableLowerTableCell.swift */; };
+		446840F22488FF0C00DD70EA /* SearchImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446840F12488FF0C00DD70EA /* SearchImageViewController.swift */; };
+		4495368A248286470066A115 /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44953689248286470066A115 /* RecipeCell.swift */; };
 		44A64F7F247E8519005606A1 /* RecipeTableSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A64F7E247E8519005606A1 /* RecipeTableSection.swift */; };
 		44DF792324829E4300144583 /* carrot.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 44DF792224829E4300144583 /* carrot.jpg */; };
 		44E18491247A0855002408DA /* RecipeList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44E18490247A0855002408DA /* RecipeList.storyboard */; };
-		44E18495247A1B57002408DA /* RecipeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E18494247A1B57002408DA /* RecipeListViewController.swift */; };
+		44E18495247A1B57002408DA /* SearchIngredientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E18494247A1B57002408DA /* SearchIngredientsViewController.swift */; };
 		5C32CBC8249140C50080B76F /* RecipeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C32CBC7249140C40080B76F /* RecipeRepository.swift */; };
 		5C32CBCA249171BE0080B76F /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C32CBC9249171BE0080B76F /* Recipe.swift */; };
 		5C32CBCC249171E40080B76F /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C32CBCB249171E40080B76F /* Ingredient.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		44218FFA2493CF860087E717 /* SearchFoodNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFoodNameViewController.swift; sourceTree = "<group>"; };
 		4442F2782479236700A7E2FA /* MenuMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MenuMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4442F27B2479236700A7E2FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4442F27D2479236700A7E2FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,12 +39,12 @@
 		4442F2842479237300A7E2FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4442F2872479237300A7E2FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4442F2892479237300A7E2FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		446840F12488FF0C00DD70EA /* FoodCameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCameraController.swift; sourceTree = "<group>"; };
-		44953689248286470066A115 /* RecipeTableLowerTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableLowerTableCell.swift; sourceTree = "<group>"; };
+		446840F12488FF0C00DD70EA /* SearchImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchImageViewController.swift; sourceTree = "<group>"; };
+		44953689248286470066A115 /* RecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
 		44A64F7E247E8519005606A1 /* RecipeTableSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableSection.swift; sourceTree = "<group>"; };
 		44DF792224829E4300144583 /* carrot.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = carrot.jpg; sourceTree = "<group>"; };
 		44E18490247A0855002408DA /* RecipeList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecipeList.storyboard; sourceTree = "<group>"; };
-		44E18494247A1B57002408DA /* RecipeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListViewController.swift; sourceTree = "<group>"; };
+		44E18494247A1B57002408DA /* SearchIngredientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchIngredientsViewController.swift; sourceTree = "<group>"; };
 		5C32CBC7249140C40080B76F /* RecipeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRepository.swift; sourceTree = "<group>"; };
 		5C32CBC9249171BE0080B76F /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		5C32CBCB249171E40080B76F /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
@@ -92,16 +94,17 @@
 				4442F2892479237300A7E2FA /* Info.plist */,
 				5C6103E32486C2FB005A6DBC /* TableViewCell.swift */,
 				44E18490247A0855002408DA /* RecipeList.storyboard */,
-				44E18494247A1B57002408DA /* RecipeListViewController.swift */,
-				44A64F7E247E8519005606A1 /* RecipeTableSection.swift */,
 				44DF792224829E4300144583 /* carrot.jpg */,
-				44953689248286470066A115 /* RecipeTableLowerTableCell.swift */,
-				446840F12488FF0C00DD70EA /* FoodCameraController.swift */,
 				5C91806424910CB7002E8732 /* DBManager.swift */,
 				5C32CBC7249140C40080B76F /* RecipeRepository.swift */,
 				5C32CBC9249171BE0080B76F /* Recipe.swift */,
 				5C32CBCD24917C220080B76F /* RecipeSummaryView.swift */,
 				5C32CBCB249171E40080B76F /* Ingredient.swift */,
+				44218FFA2493CF860087E717 /* SearchFoodNameViewController.swift */,
+				44E18494247A1B57002408DA /* SearchIngredientsViewController.swift */,
+				44A64F7E247E8519005606A1 /* RecipeTableSection.swift */,
+				44953689248286470066A115 /* RecipeCell.swift */,
+				446840F12488FF0C00DD70EA /* SearchImageViewController.swift */,
 			);
 			path = MenuMenu;
 			sourceTree = "<group>";
@@ -180,12 +183,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44E18495247A1B57002408DA /* RecipeListViewController.swift in Sources */,
+				44E18495247A1B57002408DA /* SearchIngredientsViewController.swift in Sources */,
 				44A64F7F247E8519005606A1 /* RecipeTableSection.swift in Sources */,
-				446840F22488FF0C00DD70EA /* FoodCameraController.swift in Sources */,
+				446840F22488FF0C00DD70EA /* SearchImageViewController.swift in Sources */,
 				4442F2802479236700A7E2FA /* ViewController.swift in Sources */,
 				5C6103E42486C2FB005A6DBC /* TableViewCell.swift in Sources */,
-				4495368A248286470066A115 /* RecipeTableLowerTableCell.swift in Sources */,
+				4495368A248286470066A115 /* RecipeCell.swift in Sources */,
+				44218FFB2493CF860087E717 /* SearchFoodNameViewController.swift in Sources */,
 				4442F27C2479236700A7E2FA /* AppDelegate.swift in Sources */,
 				5C32CBCC249171E40080B76F /* Ingredient.swift in Sources */,
 				5C32CBCE24917C220080B76F /* RecipeSummaryView.swift in Sources */,
