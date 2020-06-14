@@ -208,7 +208,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ljw-9Z-U02">
                                 <rect key="frame" x="20" y="13" width="335" height="685.66666666666663"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="요리 이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="08h-SI-UBt">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="요리 이름" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="08h-SI-UBt">
                                         <rect key="frame" x="90.333333333333329" y="0.0" width="154.33333333333337" height="50.333333333333336"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="154.5" id="581-RP-ptm"/>
@@ -243,21 +243,26 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="335" height="43.666667938232422"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="고춧가루" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zlz-N9-qSm">
-                                                            <rect key="frame" x="78" y="9" width="73" height="26"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="고춧가루" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zlz-N9-qSm">
+                                                            <rect key="frame" x="50.000000000000007" y="9.3333333333333339" width="72.666666666666686" height="25.333333333333329"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1큰술" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BZW-ly-a3C">
-                                                            <rect key="frame" x="244" y="10" width="40" height="22"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1큰술" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BZW-ly-a3C">
+                                                            <rect key="frame" x="245.66666666666666" y="11.000000000000002" width="39.333333333333343" height="21.666666666666671"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="zlz-N9-qSm" firstAttribute="leading" secondItem="53J-Os-Lcr" secondAttribute="leading" constant="50" id="Crh-kl-NZk"/>
+                                                        <constraint firstAttribute="trailing" secondItem="BZW-ly-a3C" secondAttribute="trailing" constant="50" id="MQb-iP-qjP"/>
+                                                        <constraint firstItem="BZW-ly-a3C" firstAttribute="centerY" secondItem="53J-Os-Lcr" secondAttribute="centerY" id="SYX-8v-tlE"/>
+                                                        <constraint firstItem="zlz-N9-qSm" firstAttribute="centerY" secondItem="53J-Os-Lcr" secondAttribute="centerY" id="blC-Ej-B40"/>
+                                                        <constraint firstItem="BZW-ly-a3C" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="zlz-N9-qSm" secondAttribute="trailing" constant="8" symbolic="YES" id="t8t-yL-0bK"/>
+                                                    </constraints>
                                                 </tableViewCellContentView>
                                             </tableViewCell>
                                         </prototypes>
@@ -298,12 +303,16 @@
                     </view>
                     <navigationItem key="navigationItem" id="JaK-VW-l5X"/>
                     <connections>
+                        <outlet property="recipeDetailDescriptionLabel" destination="PQI-XY-buj" id="lSL-Va-di3"/>
+                        <outlet property="recipeDetailImageView" destination="lB1-1t-24o" id="ReI-ag-XdY"/>
+                        <outlet property="recipeDetailNameLabel" destination="08h-SI-UBt" id="qJD-wg-aSH"/>
+                        <outlet property="recipeDetailTableView" destination="mAV-EE-f3k" id="lxI-7B-jNu"/>
                         <outlet property="spinner" destination="MsX-uQ-bh8" id="ePj-YT-UR9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6qX-34-k0c" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2198" y="-502"/>
+            <point key="canvasLocation" x="2197.5999999999999" y="-502.46305418719214"/>
         </scene>
         <!--음식 이름으로 검색-->
         <scene sceneID="syC-tv-6zJ">
