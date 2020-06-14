@@ -21,6 +21,8 @@ class UICustomRoundTitleLabel: UILabel {
         
         self.backgroundColor = UIColor(cgColor: CGColor.init(srgbRed: 1.0, green: 210/256, blue: 88/256, alpha: 1))
         self.tintColor = UIColor.black
+        
+        self.adjustsFontSizeToFitWidth = true
     }
     
     @IBInspectable var topInset: CGFloat = 5.0
