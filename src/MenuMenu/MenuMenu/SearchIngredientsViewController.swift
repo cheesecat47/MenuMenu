@@ -36,6 +36,14 @@ class SearchIngredientsViewController: UIViewController {
     var recipeTable = RecipeTable()
     lazy var sections = recipeTable.getSections()
     
+    
+    @IBAction func searchSelectedIngredients(_ sender: Any) {
+        let ingredientArray = Array(searchResultDic.values)
+        dump("SearchIngredientsViewController: searchSelectedIngredients: ingredientArray \(ingredientArray)")
+        let ingredientConcated = searchResultDic.values.joined(separator: ",")
+        dump("SearchIngredientsViewController: searchSelectedIngredients: ingredientConcated \(ingredientConcated)")
+    }
+    
 //    var searchResultArr: [Recipe] = []
     var searchResultArr: [Recipe] = [
         RecipeRepository.shared.getRecipeById(id: 1)!,
@@ -46,16 +54,7 @@ class SearchIngredientsViewController: UIViewController {
             dump("SearchIngredientsViewController: searchResultArr: didSet: \(searchResultArr)")
         }
     }
-    var searchResultDic: [Int:String] = [:] {
-        didSet {
-//            dump("SearchIngredientsViewController: searchResultDic: didSet: \(searchResultDic)")
-            // 선택된 재료 목록이 바뀔 때마다
-//            searchResultArr.removeAll() // lowerTable에 들어갈 목록 클리어.
-            let ingredientConcated = searchResultDic.values.joined(separator: ",")
-            dump("SearchIngredientsViewController: searchResultDic: didSet: ingredientConcated \(ingredientConcated)")
-            // 이거로 db에 쿼리
-        }
-    }
+    var searchResultDic: [Int:String] = [:]
 }
 
 extension SearchIngredientsViewController: UITableViewDataSource {

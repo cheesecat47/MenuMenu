@@ -16,10 +16,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="MM3-bq-6Po">
-                                <rect key="frame" x="20" y="108" width="335" height="250"/>
+                                <rect key="frame" x="20" y="108" width="335" height="220"/>
                                 <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="E6o-po-6NN"/>
+                                    <constraint firstAttribute="height" constant="220" id="E6o-po-6NN"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="upperCell" id="CkR-Xn-prE">
@@ -42,23 +42,23 @@
                                 <color key="backgroundColor" white="1" alpha="0.49729773116438358" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="lowerCell" id="bdY-da-Rww" customClass="RecipeCell" customModule="MenuMenu" customModuleProvider="target">
-                                        <rect key="frame" x="15" y="55.333332061767578" width="305" height="160.66667175292969"/>
+                                        <rect key="frame" x="15" y="55.333332061767578" width="305" height="97"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bdY-da-Rww" id="Ofx-ls-4Mj">
-                                            <rect key="frame" x="0.0" y="0.0" width="305" height="160.66667175292969"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="305" height="97"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ho4-st-dJd">
-                                                    <rect key="frame" x="10" y="10" width="285" height="140.66666666666666"/>
+                                                    <rect key="frame" x="10" y="10" width="285" height="77"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of the food" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SKK-RQ-IbM">
-                                                            <rect key="frame" x="76.000000000000014" y="0.0" width="133.33333333333337" height="20.666666666666668"/>
+                                                            <rect key="frame" x="76.000000000000014" y="0.0" width="133.33333333333337" height="20.333333333333332"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="65h-CE-ucE">
-                                                            <rect key="frame" x="0.0" y="20.666666666666671" width="285" height="120.00000000000001"/>
+                                                            <rect key="frame" x="0.0" y="20.333333333333332" width="285" height="56.666666666666671"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" relation="lessThanOrEqual" constant="120" id="0ni-mo-VmH"/>
                                                             </constraints>
@@ -90,16 +90,28 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K9M-s9-In1">
+                                <rect key="frame" x="116.66666666666669" y="338" width="142" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.72156862749999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="선택한 재료로 음식 검색">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="searchSelectedIngredients:" destination="vXt-a4-gCZ" eventType="touchUpInside" id="h8c-ct-nnj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.72156862749999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Ayt-M0-vRv" firstAttribute="trailing" secondItem="MM3-bq-6Po" secondAttribute="trailing" constant="20" id="7Ty-3a-y0Q"/>
+                            <constraint firstItem="K9M-s9-In1" firstAttribute="centerX" secondItem="Ayt-M0-vRv" secondAttribute="centerX" id="F68-Fh-7CH"/>
                             <constraint firstItem="MM3-bq-6Po" firstAttribute="top" secondItem="Ayt-M0-vRv" secondAttribute="top" constant="20" id="HdP-vp-FTa"/>
                             <constraint firstItem="MM3-bq-6Po" firstAttribute="leading" secondItem="Ayt-M0-vRv" secondAttribute="leading" constant="20" id="PFT-dz-khG"/>
                             <constraint firstItem="uhN-VD-sVp" firstAttribute="leading" secondItem="Ayt-M0-vRv" secondAttribute="leading" constant="20" id="VOd-vz-EIZ"/>
+                            <constraint firstItem="uhN-VD-sVp" firstAttribute="top" secondItem="K9M-s9-In1" secondAttribute="bottom" constant="10" id="e9e-GY-hc1"/>
                             <constraint firstItem="Ayt-M0-vRv" firstAttribute="trailing" secondItem="uhN-VD-sVp" secondAttribute="trailing" constant="20" id="law-pN-ZCi"/>
                             <constraint firstItem="Ayt-M0-vRv" firstAttribute="bottom" secondItem="uhN-VD-sVp" secondAttribute="bottom" constant="20" id="mnZ-zh-Zen"/>
-                            <constraint firstItem="uhN-VD-sVp" firstAttribute="top" secondItem="MM3-bq-6Po" secondAttribute="bottom" constant="20" id="xs6-3V-kuV"/>
+                            <constraint firstItem="K9M-s9-In1" firstAttribute="top" secondItem="MM3-bq-6Po" secondAttribute="bottom" constant="10" id="rcg-wr-AnO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ayt-M0-vRv"/>
                     </view>
@@ -111,7 +123,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TcX-o5-k8X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1268" y="-502"/>
+            <point key="canvasLocation" x="1268" y="-502.46305418719214"/>
         </scene>
         <!--음식 사진으로 검색-->
         <scene sceneID="wtX-Pt-mJA">
