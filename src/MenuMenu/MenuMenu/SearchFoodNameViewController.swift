@@ -54,7 +54,7 @@ class SearchFoodNameViewController: UIViewController {
                 } else {
                     recipe = recipes[indexPath.row]
                 }
-                let controller = segue.destination as! ViewController
+                let controller = segue.destination as! RecipeDetailViewContoller
 //                controller.detailRecipe = recipe
                 controller.navigationItem.leftItemsSupplementBackButton = true
             }
