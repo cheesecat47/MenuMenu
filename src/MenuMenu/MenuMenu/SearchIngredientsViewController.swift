@@ -10,6 +10,7 @@
 //    https://stackoverrun.com/ko/q/11646578
 //    https://zeddios.tistory.com/169
 //    https://etst.tistory.com/105?category=861730
+//    https://stackoverflow.com/questions/33793211/tableview-rounded-corners-and-shadow/33794065
 
 
 import UIKit
@@ -25,6 +26,12 @@ class SearchIngredientsViewController: UIViewController {
         self.lowerTableView.dataSource = self
         self.lowerTableView.delegate = self
 //        self.lowerTableView.register(RecipeCell.self, forCellReuseIdentifier: lowerCellIdentifier)
+        
+        // set rounded table views
+        self.upperTableView.layer.cornerRadius = 10
+        self.upperTableView.layer.masksToBounds = true
+        self.lowerTableView.layer.cornerRadius = 10
+        self.lowerTableView.layer.masksToBounds = true
     }
 
     @IBOutlet weak var upperTableView: UITableView!
