@@ -21,6 +21,10 @@ class SearchFoodNameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // set rounded table views
+        self.tableView.layer.cornerRadius = 10
+        self.tableView.layer.masksToBounds = true
+        
         // setup search controller
         searchController.searchResultsUpdater = self // UISearchBar 내의 텍스트 변경 시 알림
         searchController.obscuresBackgroundDuringPresentation = false // 배경 안 흐리게
@@ -54,8 +58,8 @@ class SearchFoodNameViewController: UIViewController {
                 } else {
                     recipe = recipes[indexPath.row]
                 }
-                let controller = segue.destination as! ViewController
-//                controller.detailRecipe = recipe
+                let controller = segue.destination as! RecipeDetailViewContoller
+                controller.detailRecipe = recipe
                 controller.navigationItem.leftItemsSupplementBackButton = true
             }
         }
