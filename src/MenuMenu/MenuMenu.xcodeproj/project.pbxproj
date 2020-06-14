@@ -16,6 +16,7 @@
 		4442F2882479237300A7E2FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4442F2862479237300A7E2FA /* LaunchScreen.storyboard */; };
 		446840F22488FF0C00DD70EA /* SearchImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446840F12488FF0C00DD70EA /* SearchImageViewController.swift */; };
 		4495368A248286470066A115 /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44953689248286470066A115 /* RecipeCell.swift */; };
+		44A1B62E2496371000F451C2 /* cooklogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 44A1B62D2496371000F451C2 /* cooklogo.png */; };
 		44A64F7F247E8519005606A1 /* RecipeTableSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A64F7E247E8519005606A1 /* RecipeTableSection.swift */; };
 		44DF792324829E4300144583 /* carrot.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 44DF792224829E4300144583 /* carrot.jpg */; };
 		44E18491247A0855002408DA /* RecipeList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44E18490247A0855002408DA /* RecipeList.storyboard */; };
@@ -41,6 +42,7 @@
 		4442F2892479237300A7E2FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		446840F12488FF0C00DD70EA /* SearchImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchImageViewController.swift; sourceTree = "<group>"; };
 		44953689248286470066A115 /* RecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
+		44A1B62D2496371000F451C2 /* cooklogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cooklogo.png; sourceTree = "<group>"; };
 		44A64F7E247E8519005606A1 /* RecipeTableSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableSection.swift; sourceTree = "<group>"; };
 		44DF792224829E4300144583 /* carrot.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = carrot.jpg; sourceTree = "<group>"; };
 		44E18490247A0855002408DA /* RecipeList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecipeList.storyboard; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				4442F2812479236700A7E2FA /* Main.storyboard */,
 				4442F2842479237300A7E2FA /* Assets.xcassets */,
 				4442F2862479237300A7E2FA /* LaunchScreen.storyboard */,
+				44A1B62D2496371000F451C2 /* cooklogo.png */,
 				5C76FC562492D4EA00B84BFB /* menumenu.sqlite */,
 				4442F2892479237300A7E2FA /* Info.plist */,
 				5C6103E32486C2FB005A6DBC /* TableViewCell.swift */,
@@ -171,6 +174,7 @@
 				4442F2882479237300A7E2FA /* LaunchScreen.storyboard in Resources */,
 				5C76FC572492D4EA00B84BFB /* menumenu.sqlite in Resources */,
 				4442F2852479237300A7E2FA /* Assets.xcassets in Resources */,
+				44A1B62E2496371000F451C2 /* cooklogo.png in Resources */,
 				44DF792324829E4300144583 /* carrot.jpg in Resources */,
 				4442F2832479236700A7E2FA /* Main.storyboard in Resources */,
 			);
