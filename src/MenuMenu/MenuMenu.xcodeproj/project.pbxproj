@@ -24,6 +24,8 @@
 		44DF792324829E4300144583 /* carrot.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 44DF792224829E4300144583 /* carrot.jpg */; };
 		44E18491247A0855002408DA /* RecipeList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44E18490247A0855002408DA /* RecipeList.storyboard */; };
 		44E18495247A1B57002408DA /* SearchIngredientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E18494247A1B57002408DA /* SearchIngredientsViewController.swift */; };
+		5C0996A9249797B80046BCA5 /* SearchFoodImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0996A8249797B80046BCA5 /* SearchFoodImageViewController.swift */; };
+		5C0996AB249798FB0046BCA5 /* menumenu.html in Resources */ = {isa = PBXBuildFile; fileRef = 5C0996AA249798FB0046BCA5 /* menumenu.html */; };
 		5C32CBC8249140C50080B76F /* RecipeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C32CBC7249140C40080B76F /* RecipeRepository.swift */; };
 		5C32CBCA249171BE0080B76F /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C32CBC9249171BE0080B76F /* Recipe.swift */; };
 		5C32CBCC249171E40080B76F /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C32CBCB249171E40080B76F /* Ingredient.swift */; };
@@ -53,6 +55,8 @@
 		44DF792224829E4300144583 /* carrot.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = carrot.jpg; sourceTree = "<group>"; };
 		44E18490247A0855002408DA /* RecipeList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecipeList.storyboard; sourceTree = "<group>"; };
 		44E18494247A1B57002408DA /* SearchIngredientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchIngredientsViewController.swift; sourceTree = "<group>"; };
+		5C0996A8249797B80046BCA5 /* SearchFoodImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFoodImageViewController.swift; sourceTree = "<group>"; };
+		5C0996AA249798FB0046BCA5 /* menumenu.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = menumenu.html; sourceTree = "<group>"; };
 		5C32CBC7249140C40080B76F /* RecipeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRepository.swift; sourceTree = "<group>"; };
 		5C32CBC9249171BE0080B76F /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		5C32CBCB249171E40080B76F /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
@@ -96,6 +100,7 @@
 				4442F27B2479236700A7E2FA /* AppDelegate.swift */,
 				4442F27D2479236700A7E2FA /* SceneDelegate.swift */,
 				4442F2812479236700A7E2FA /* Main.storyboard */,
+				5C0996AA249798FB0046BCA5 /* menumenu.html */,
 				4442F2842479237300A7E2FA /* Assets.xcassets */,
 				4442F2862479237300A7E2FA /* LaunchScreen.storyboard */,
 				44A1B62D2496371000F451C2 /* cooklogo.png */,
@@ -117,6 +122,7 @@
 				4436394A24965D7C008A22FB /* UICustomRoundButton.swift */,
 				4436394C24966231008A22FB /* UICustomRoundTitleLabel.swift */,
 				44363950249667BD008A22FB /* UICustomRoundDescriptionTextView.swift */,
+				5C0996A8249797B80046BCA5 /* SearchFoodImageViewController.swift */,
 			);
 			path = MenuMenu;
 			sourceTree = "<group>";
@@ -181,6 +187,7 @@
 			files = (
 				44E18491247A0855002408DA /* RecipeList.storyboard in Resources */,
 				4442F2882479237300A7E2FA /* LaunchScreen.storyboard in Resources */,
+				5C0996AB249798FB0046BCA5 /* menumenu.html in Resources */,
 				5C76FC572492D4EA00B84BFB /* menumenu.sqlite in Resources */,
 				4442F2852479237300A7E2FA /* Assets.xcassets in Resources */,
 				44A1B62E2496371000F451C2 /* cooklogo.png in Resources */,
@@ -206,6 +213,7 @@
 				44218FFB2493CF860087E717 /* SearchFoodNameViewController.swift in Sources */,
 				4442F27C2479236700A7E2FA /* AppDelegate.swift in Sources */,
 				4436394B24965D7C008A22FB /* UICustomRoundButton.swift in Sources */,
+				5C0996A9249797B80046BCA5 /* SearchFoodImageViewController.swift in Sources */,
 				44363951249667BD008A22FB /* UICustomRoundDescriptionTextView.swift in Sources */,
 				5C32CBCC249171E40080B76F /* Ingredient.swift in Sources */,
 				5C32CBCE24917C220080B76F /* RecipeSummaryView.swift in Sources */,
