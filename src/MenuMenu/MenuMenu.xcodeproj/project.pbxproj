@@ -24,6 +24,7 @@
 		44DF792324829E4300144583 /* carrot.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 44DF792224829E4300144583 /* carrot.jpg */; };
 		44E18491247A0855002408DA /* RecipeList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44E18490247A0855002408DA /* RecipeList.storyboard */; };
 		44E18495247A1B57002408DA /* SearchIngredientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E18494247A1B57002408DA /* SearchIngredientsViewController.swift */; };
+		44ECAEEF2497A95C002BC917 /* SearchResultListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ECAEEE2497A95C002BC917 /* SearchResultListViewController.swift */; };
 		5C0996A9249797B80046BCA5 /* SearchFoodImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0996A8249797B80046BCA5 /* SearchFoodImageViewController.swift */; };
 		5C0996AB249798FB0046BCA5 /* menumenu.html in Resources */ = {isa = PBXBuildFile; fileRef = 5C0996AA249798FB0046BCA5 /* menumenu.html */; };
 		5C32CBC8249140C50080B76F /* RecipeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C32CBC7249140C40080B76F /* RecipeRepository.swift */; };
@@ -55,6 +56,7 @@
 		44DF792224829E4300144583 /* carrot.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = carrot.jpg; sourceTree = "<group>"; };
 		44E18490247A0855002408DA /* RecipeList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecipeList.storyboard; sourceTree = "<group>"; };
 		44E18494247A1B57002408DA /* SearchIngredientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchIngredientsViewController.swift; sourceTree = "<group>"; };
+		44ECAEEE2497A95C002BC917 /* SearchResultListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultListViewController.swift; sourceTree = "<group>"; };
 		5C0996A8249797B80046BCA5 /* SearchFoodImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFoodImageViewController.swift; sourceTree = "<group>"; };
 		5C0996AA249798FB0046BCA5 /* menumenu.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = menumenu.html; sourceTree = "<group>"; };
 		5C32CBC7249140C40080B76F /* RecipeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRepository.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				5C32CBCB249171E40080B76F /* Ingredient.swift */,
 				44218FFA2493CF860087E717 /* SearchFoodNameViewController.swift */,
 				44E18494247A1B57002408DA /* SearchIngredientsViewController.swift */,
+				44ECAEEE2497A95C002BC917 /* SearchResultListViewController.swift */,
 				44A64F7E247E8519005606A1 /* RecipeTableSection.swift */,
 				44953689248286470066A115 /* RecipeCell.swift */,
 				446840F12488FF0C00DD70EA /* SearchImageViewController.swift */,
@@ -211,6 +214,7 @@
 				5C6103E42486C2FB005A6DBC /* TableViewCell.swift in Sources */,
 				4495368A248286470066A115 /* RecipeCell.swift in Sources */,
 				44218FFB2493CF860087E717 /* SearchFoodNameViewController.swift in Sources */,
+				44ECAEEF2497A95C002BC917 /* SearchResultListViewController.swift in Sources */,
 				4442F27C2479236700A7E2FA /* AppDelegate.swift in Sources */,
 				4436394B24965D7C008A22FB /* UICustomRoundButton.swift in Sources */,
 				5C0996A9249797B80046BCA5 /* SearchFoodImageViewController.swift in Sources */,
