@@ -15,11 +15,12 @@ class DBManager {
     private init(){
         // Copy database from Bundle to Document
         let url = Bundle.main.resourceURL?.appendingPathComponent("menumenu.sqlite")
-        print((url?.path)!)
-        do {
-            try FileManager.default.copyItem(atPath: (url?.path)!, toPath: dbURL.path)
-        } catch let error as NSError {
-            print("!!! ERROR copy db from bundle to filesystem fail:\n\(error)")
+        if !FileManager.default.fileExists(atPath: dbURL.path) {
+            do {
+                try FileManager.default.copyItem(atPath: (url?.path)!, toPath: dbURL.path)
+            } catch let error as NSError {
+                print("!!! ERROR copy db from bundle to filesystem fail:\n\(error)")
+            }
         }
     }
     

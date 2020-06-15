@@ -151,4 +151,35 @@ class RecipeRepository {
         }
         return ingredientNames
     }
+    
+    func getRecipesIdByIngredientNames(ingredientNames: [String]) -> [Int]?{
+        self.dbManager.openDatabase()
+        defer {
+            self.dbManager.closeDatabase()
+        }
+        let queryBase = """
+        SELECT  r.recipe_id, r.food_name
+        FROM recipe_basic r, recipe_ingredient i
+        WHERE r.recipe_id = i.recipe_id AND i.ingredient_name LIKE
+        """
+        var query = ""
+        for (i, name) in ingredientNames.enumerated() {
+            query += "\(queryBase) \"\(name)\""
+            if i != ingredientNames.endIndex-1 {
+                query += " INTERSECT "
+            }
+        }
+        var recipeIdList = [Int]()
+        if let results = dbManager.execQuery(queryString: query) {
+            for result in results {
+                if let recipeId = Int(result["recipe_id"] ?? "") ?? nil {
+                    recipeIdList.append(recipeId)
+                }
+            }
+        }
+        if recipeIdList.count == 0 {
+            return nil
+        }
+        return recipeIdList
+    }
 }
