@@ -25,7 +25,6 @@ class SearchIngredientsViewController: UIViewController {
         
         self.lowerTableView.dataSource = self
         self.lowerTableView.delegate = self
-//        self.lowerTableView.register(RecipeCell.self, forCellReuseIdentifier: lowerCellIdentifier)
         
         // set rounded table views
         self.upperTableView.layer.cornerRadius = 10
@@ -40,29 +39,55 @@ class SearchIngredientsViewController: UIViewController {
     let upperCellIdentifier: String = "upperCell"
     let lowerCellIdentifier: String = "lowerCell"
     
+    // lowerTable recipe data
     var recipeTable = RecipeTable()
     lazy var sections = recipeTable.getSections()
     
-    
-    @IBAction func searchSelectedIngredients(_ sender: Any) {
-        let ingredientArray = Array(searchResultDic.values)
-        dump("SearchIngredientsViewController: searchSelectedIngredients: ingredientArray \(ingredientArray)")
-        let ingredientConcated = searchResultDic.values.joined(separator: ",")
-        dump("SearchIngredientsViewController: searchSelectedIngredients: ingredientConcated \(ingredientConcated)")
-    }
-    
-//    var searchResultArr: [Recipe] = []
-    var searchResultArr: [Recipe] = [
-        RecipeRepository.shared.getRecipeById(id: 1)!,
-        RecipeRepository.shared.getRecipeById(id: 2)!,
-        RecipeRepository.shared.getRecipeById(id: 3)!
-        ] {
+    // upper table data
+    var searchResultArr: [Recipe] = [] {
         didSet {
             dump("SearchIngredientsViewController: searchResultArr: didSet: \(searchResultArr)")
         }
     }
     var searchResultDic: [Int:String] = [:]
+    
+    // search button handler
+    @IBAction func searchSelectedIngredients(_ sender: Any) {
+        let ingredientArray = Array(searchResultDic.values)
+        dump("SearchIngredientsViewController: searchSelectedIngredients: ingredientArray \(ingredientArray)")
+        searchResultArr.removeAll()
+        if ingredientArray.count > 0 {
+            if let recipesWithSelectedIngredients = RecipeRepository.shared.getRecipesIdByIngredientNames(ingredientNames: ingredientArray) {
+                dump("SearchIngredientsViewController: searchSelectedIngredients: recipesWithSelectedIngredients: \(recipesWithSelectedIngredients)")
+                for id in recipesWithSelectedIngredients {
+                    if let thisRecipe = RecipeRepository.shared.getRecipeById(id: id) {
+                        searchResultArr.append(thisRecipe)
+                    }
+                }
+                self.lowerTableView.reloadData()
+            }
+        } else {
+            dump("SearchIngredientsViewController: searchSelectedIngredients: no Selected Ingredients")
+            self.lowerTableView.reloadData()
+        }
+    } // end btn handler
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        if segue.identifier == "showRecipeDetail" {
+            if let indexPath = lowerTableView.indexPathForSelectedRow {
+                dump("SearchIngredientsViewController: prepare: indexPath: \(indexPath)")
+                let thisRecipe = searchResultArr[indexPath.row]
+                dump("SearchIngredientsViewController: prepare: thisRecipe: \(thisRecipe.foodName)")
+                let controller = segue.destination as! RecipeDetailViewContoller
+                controller.detailRecipe = thisRecipe
+                controller.navigationItem.leftItemsSupplementBackButton = true
+            }
+        }
+    }
 }
+
 
 extension SearchIngredientsViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -160,7 +185,7 @@ extension SearchIngredientsViewController: UITableViewDelegate {
             }
             
         } else {
-            dump("lowerCell Clicked!")
+            dump("SearchIngredientsViewController: lowerCell Clicked!")
         }
     }
 }

@@ -40,16 +40,21 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="uhN-VD-sVp">
                                 <rect key="frame" x="20" y="364" width="335" height="345"/>
                                 <color key="backgroundColor" white="1" alpha="0.49729773116438358" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="fMd-qI-KKC">
+                                    <rect key="frame" x="0.0" y="184.99999618530273" width="335" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="lowerCell" id="bdY-da-Rww" customClass="RecipeCell" customModule="MenuMenu" customModuleProvider="target">
-                                        <rect key="frame" x="15" y="55.333332061767578" width="305" height="110"/>
+                                        <rect key="frame" x="15" y="55.333332061767578" width="305" height="111.66666412353516"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bdY-da-Rww" id="Ofx-ls-4Mj">
-                                            <rect key="frame" x="0.0" y="0.0" width="305" height="110"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="305" height="111.66666412353516"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ho4-st-dJd">
-                                                    <rect key="frame" x="10" y="10" width="285" height="90"/>
+                                                    <rect key="frame" x="10" y="10" width="285" height="91.666666666666671"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of the food" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SKK-RQ-IbM">
                                                             <rect key="frame" x="76.000000000000014" y="0.0" width="133.33333333333337" height="20.333333333333332"/>
@@ -58,7 +63,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="65h-CE-ucE">
-                                                            <rect key="frame" x="0.0" y="20.333333333333336" width="285" height="69.666666666666657"/>
+                                                            <rect key="frame" x="0.0" y="20.333333333333336" width="285" height="71.333333333333314"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" relation="lessThanOrEqual" constant="120" id="0ni-mo-VmH"/>
                                                             </constraints>
@@ -85,7 +90,7 @@
                                         <connections>
                                             <outlet property="recipeCellImage" destination="65h-CE-ucE" id="O0n-5n-SMW"/>
                                             <outlet property="recipeCellLabel" destination="SKK-RQ-IbM" id="w6Z-8i-ReW"/>
-                                            <segue destination="GZT-fb-E5x" kind="showDetail" id="9N7-xE-iv6"/>
+                                            <segue destination="GZT-fb-E5x" kind="showDetail" identifier="showRecipeDetail" id="9N7-xE-iv6"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
