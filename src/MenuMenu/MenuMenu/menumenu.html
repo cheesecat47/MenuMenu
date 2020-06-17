@@ -134,6 +134,7 @@
     <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <script>
         function readURL(input) {
+            console.log("readURL")
             if (input.files && input.files[0]) {
 
                 var reader = new FileReader();
@@ -155,6 +156,7 @@
         }
 
         function removeUpload() {
+            console.log("removeUpload")
             $('.file-upload-input').replaceWith($('.file-upload-input').clone());
             $('.file-upload-content').hide();
             $('.image-upload-wrap').show();
@@ -205,28 +207,35 @@
 
         // Load the image model and setup the webcam
         async function predict() {
+            console.log("predict")
             const modelURL = URL + "model.json";
             const metadataURL = URL + "metadata.json";
             // init
             const model = await tmImage.load(modelURL, metadataURL);
             const maxPredictions = model.getTotalClasses();
+            console.log("predict: init model")
 
-            let labelContainer = document.getElementById("label-container");
-            for (let i = 0; i < maxPredictions; i++) { // and class labels
-                labelContainer.appendChild(document.createElement("div"));
-            }
+            //let labelContainer = document.getElementById("label-container");
+            //for (let i = 0; i < maxPredictions; i++) { // and class labels
+            //    labelContainer.appendChild(document.createElement("div"));
+            //}
             
             // predict
             const prediction = await model.predict(document.getElementById("predictable-image"), false);
             prediction.sort((a, b) => b.probability.toFixed(2) - a.probability.toFixed(2))
             results = []
+            console.log("predict: results: " + results)
 
             for (let i = 0; i < 5; i++) {
-                results.push({
-                    foodName: prediction[i].className,
-                    probability: prediction[i].probability.toFixed(2)
-                })
+                if (prediction[i].probability.toFixed(2) >= 0.7){
+                    console.log("predict: 이 음식이 맞을 확률 70% 이상!")
+                    results.push({
+                        foodName: prediction[i].className,
+                        probability: prediction[i].probability.toFixed(2)
+                    })
+                }
             }
+            console.log("predict: postMessage to webkit")
             webkit.messageHandlers.callbackHandler.postMessage(results);
         }
 
