@@ -18,14 +18,14 @@ Search Bar를 사용해 특정 음식 검색도 가능합니다.
 재료 목록으로 검색 탭입니다.  
 집에 있는 재료를 선택하고 검색 버튼을 누르면 해당 재료가 들어가는 음식 목록을 보여줍니다. 
 
-![tab3_1](docs/tab3_1.png)  
+![tab3_1](docs/tab3_1.PNG)  
 음식 사진으로 검색 탭입니다.  
 원하는 사진을 업로드 합니다.  
 
-![tab3_2](docs/tab3_2.png)  
+![tab3_2](docs/tab3_2.PNG)  
 음식 인식하기 버튼을 클릭하면 AI를 사용해 사진을 분석합니다.  
 
-![tab3_3](docs/tab3_3.png)  
+![tab3_3](docs/tab3_3.PNG)  
 분석 결과가 나오고 음식을 선택하면 세부 정보를 보여줍니다.  
 
 ![recipedetail](docs/recipedetail.png)  
